@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Edit Author</title>
+</head>
+<body>
+    <a routerLink="/">Home</a>
+    <p *ngIf="error">{{error}}</p>
+    <form (submit)="editauthor(author._id)" class="editauthor">
+      Author name:<input type="text" name="author.name" [(ngModel)]="author.name"><br>
+      <input type="submit" value="update">
+      <button [routerLink]="['/']">Cancel</button>
+    </form>
+    
+</body>
+</html>
